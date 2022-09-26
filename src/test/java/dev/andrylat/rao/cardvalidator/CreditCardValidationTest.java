@@ -1,11 +1,8 @@
-package creditCardValidation;
+package dev.andrylat.rao.cardvalidator;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
 import static org.junit.Assert.*;
-import static org.hamcrest.core.StringStartsWith.*;
 
 public class CreditCardValidationTest {
 
@@ -28,7 +25,7 @@ public class CreditCardValidationTest {
     @Test
     public void testCreditCardNumberOnlyNumber(){
         number.setCardNumber("1234xzyq1111");
-        assertFalse(number.getCardNumber().matches("[0-9]"));
+        assertFalse(number.getCardNumber().matches("^4[0-9]{15}|(5[1-5]|3[5-8]|65)[0-9]{14}|(6011[0-9]{12})$"));
     }
 
     @Test

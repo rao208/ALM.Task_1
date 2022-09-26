@@ -1,4 +1,4 @@
-package creditCardValidation;
+package dev.andrylat.rao.cardvalidator;
 
 public class creditCardValidation {
 

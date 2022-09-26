@@ -1,22 +1,23 @@
-package creditCardValidation;
+package dev.andrylat.rao.cardvalidator;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
+public class Test {
     public static void main(String[] args) {
 
         creditCardValidation cardNumber = new creditCardValidation();
         String newLine = System.getProperty("line.separator");//This will retrieve line separator dependent on OS.
-
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Hello. Enter card number for validation:");
 
         cardNumber.setCardNumber(sc.nextLine());
-
         Matcher m = Pattern.compile("\\d{16}").matcher(cardNumber.getCardNumber());
+
+        // throw exception in this class (list with error messages)
+
+        // catch exception in the main. throw error messages to user
 
         if (!m.matches()) {
             System.out.println("Card number is invalid");
